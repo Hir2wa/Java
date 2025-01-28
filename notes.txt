@@ -1,2 +1,13 @@
 1st  step  installing  driver  class 
    driver  class  com.jdbc.mysql.driver   given by  driver software vende 
+   etsabls  connection bettwen java programming  ND  DATABASE  GETCONNECTION WITH 3  PARAMETHERS   WHICH IS  DRIVER  MANAGER 
+   THEN I GET  CONNECTION WITH DATABASE 
+
+
+   no select  querlt      we  iuse executeUpdate 
+   executequerly()
+   execute()
+
+         we  create  connenction object   connection con =
+     we  create  statement    //  statement st = con.createStatement 
+     st.executeupdate(sql_query)
