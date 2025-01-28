@@ -1,0 +1,2 @@
+1st  step  installing  driver  class 
+   driver  class  com.jdbc.mysql.driver   given by  driver software vende 
