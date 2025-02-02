@@ -6,7 +6,7 @@ public class Work {
         // Define database connection details
         String url = "jdbc:mysql://localhost:3306/your_database"; // Replace 'your_database' with the actual database name
         String username = "root";
-        String password = "fabrice2003";
+        String password = ",fabrice2003";
 
         // SQL query to create a table
         String sql_query = "CREATE TABLE IF NOT EXISTS example_table (" +

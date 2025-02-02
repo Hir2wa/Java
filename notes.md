@@ -61,3 +61,5 @@ st.executeUpdate(sql_query);
 st.close();
 con.close();
 ```
+
+### try with resources
