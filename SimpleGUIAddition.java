@@ -15,7 +15,7 @@ public class SimpleGUIAddition {
           num1 = Integer.parseInt(number1);
           num2= Integer.parseInt(number2);
           sum= num1 + num2;
-          JOptionPane.showMessageDialog(null, "The Sum =" +sum , "Result",JOptionPane.ERROR_MESSAGE);
+          JOptionPane.showMessageDialog(null, "The Sum =" +sum , "Result",JOptionPane.QUESTION_MESSAGE);
         
     }
 }

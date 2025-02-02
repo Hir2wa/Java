@@ -1,9 +1,13 @@
-# Step 1
+# HOW TO SETUPT JFRAME
 
-## create an instance of jframe on which component can be added
+## Step 1
 
-## create instance of the component
+### create an instance of jframe on which component can be added (Jframe is a class )
 
-## add the component to the jframe
+### create instance of the component
 
-## joptionpane : these is a java build-inn class which provide GUI application for message box input box cobfirm box
+### add the component to the jframe
+
+#### joptionpane : these is a java build-inn class which provide GUI application for message box input box cobfirm box
+
+#### drag and drop methods
