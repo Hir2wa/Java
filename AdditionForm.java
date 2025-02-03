@@ -29,7 +29,7 @@ public class AdditionForm {
         btn.setBounds(100, 200, 100, 30);
 
         // Step 4: Adding components to the frame
-        frame.setLayout(null); // Use absolute layout
+        frame.setLayout(null); 
         frame.add(lblnum1);
         frame.add(textnum1);
         frame.add(lblnum2);
