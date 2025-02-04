@@ -4,15 +4,15 @@ public class Work {
 
     public static void main(String[] args) {
         // Define database connection details
-        String url = "jdbc:mysql://localhost:3306/your_database"; // Replace 'your_database' with the actual database name
+        String url = "jdbc:mysql://localhost:3306/exampledb"; // Replace 'your_database' with the actual database name
         String username = "root";
-        String password = ",fabrice2003";
+        String password = "";
 
         // SQL query to create a table
-        String sql_query = "CREATE TABLE IF NOT EXISTS example_table (" +
-                           "id INT AUTO_INCREMENT PRIMARY KEY, " +
-                           "name VARCHAR(100) NOT NULL, " +
-                           "age INT NOT NULL)";
+        String sql_query = "CREATE TABLE IF NOT EXISTS Employee (" +
+                           "ID INT AUTO_INCREMENT PRIMARY KEY, " +
+                           "Name VARCHAR(100) NOT NULL, " +
+                           "Age INT NOT NULL)";
 
         try {
             // Load MySQL JDBC Driver

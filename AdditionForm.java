@@ -30,7 +30,7 @@ public class AdditionForm {
 
         // Step 4: Adding components to the frame
         frame.setLayout(null); 
-        frame.add(lblnum1);
+        frame.add(lblnum1); +
         frame.add(textnum1);
         frame.add(lblnum2);
         frame.add(textnum2);
