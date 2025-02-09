@@ -1,16 +1,15 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Registraction{
+public class Registration {
     public static void main(String[] args) {
-      
         JFrame jframe = new JFrame("Employee Form");
         jframe.setSize(800, 800);
         jframe.setResizable(false);
-        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        jframe.setLocationRelativeTo(null); 
+        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jframe.setLocationRelativeTo(null);
 
-    
+        // Labels
         JLabel lblForm1 = new JLabel("Employee Id");
         JLabel lblForm2 = new JLabel("First Name");
         JLabel lblForm3 = new JLabel("Last Name");
@@ -30,7 +29,12 @@ public class Registraction{
         // Radio Buttons for Gender
         JRadioButton radio1 = new JRadioButton("Female");
         JRadioButton radio2 = new JRadioButton("Male");
-      
+
+        // Group radio buttons
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(radio1);
+        genderGroup.add(radio2);
+
         // Department ComboBox
         String[] departmentList = {"IT", "Finance", "Accounting", "HR"};
         JComboBox<String> comboBox = new JComboBox<>(departmentList);
@@ -44,11 +48,6 @@ public class Registraction{
 
         // Save Button
         JButton btnSave = new JButton("Save");
-
-        // Group radio buttons (ensure only one gender is selected)
-        ButtonGroup genderGroup = new ButtonGroup();
-        genderGroup.add(radio1);
-        genderGroup.add(radio2);
 
         // Setting bounds for the components
         lblForm1.setBounds(100, 55, 150, 30);
@@ -82,7 +81,7 @@ public class Registraction{
 
         btnSave.setBounds(260, 550, 100, 30);
 
-    
+        // Adding components to the frame
         jframe.setLayout(null);
         jframe.add(lblForm1);
         jframe.add(field1);
@@ -108,9 +107,39 @@ public class Registraction{
         jframe.add(btnSave);
 
     
-        jframe.setVisible(true);
+        btnSave.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String empId = field1.getText();
+                String firstName = field2.getText();
+                String lastName = field3.getText();
+                String age = field4.getText();
+                String salary = field5.getText();
+                String gender = radio1.isSelected() ? "Female" : (radio2.isSelected() ? "Male" : "Not Selected");
+                String department = (String) comboBox.getSelectedItem();
+                StringBuilder hobbies = new StringBuilder();
 
-     btnSave.addActionListener(comboBox);
-      
+                if (chk1.isSelected()) hobbies.append("Football ");
+                if (chk2.isSelected()) hobbies.append("Volley Ball ");
+                if (chk3.isSelected()) hobbies.append("Cricket ");
+                if (chk4.isSelected()) hobbies.append("Swimming ");
+
+                if (!chk5.isSelected()) {
+                    JOptionPane.showMessageDialog(jframe, "You must accept the terms and conditions.", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+             System.out.println(" Employee: " +empId);
+             System.out.println("First Name: " +firstName);
+             System.out.println("LastName: "+lastName);
+             System.out.println("LastName: "+age);
+             System.out.println("Gender : " +gender);
+             System.out.println("Salary: " +salary);
+             System.out.println("Department " +department);
+             System.out.println("Hobbies: "+hobbies);
+            }
+        });
+
+        jframe.setVisible(true);
     }
 }
