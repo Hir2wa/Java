@@ -132,7 +132,8 @@ public class Registration {
              System.out.println(" Employee: " +empId);
              System.out.println("First Name: " +firstName);
              System.out.println("LastName: "+lastName);
-             System.out.println("LastName: "+age);
+             System.out.println("LastName: "+lastName);
+             System.out.println("Age :" +age);
              System.out.println("Gender : " +gender);
              System.out.println("Salary: " +salary);
              System.out.println("Department " +department);

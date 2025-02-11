@@ -22,9 +22,9 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/your_d
 ## 3. Working with SQL Queries
 
 ```java Query Types:
-executeUpdate(): Used for non-select queries like INSERT, UPDATE, DELETE, or CREATE TABLE.
-executeQuery(): Used for SELECT queries to retrieve data from the database.
-execute(): Used for general-purpose query execution when you're unsure of the type (not commonly used).
+executeUpdate(): Used for non-select queries like INSERT, UPDATE, DELETE, or CREATE TABLE.(Return Int)
+executeQuery(): Used for SELECT queries to retrieve data from the database.(Return Boolean)
+execute(): Used for general-purpose query execution when you're unsure of the type (not commonly used).(Return Result Set)
 ```
 
 ## 4. Create Objects for Database Operations
