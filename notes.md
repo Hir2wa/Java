@@ -39,7 +39,7 @@ Statement Object:
 Used to execute SQL queries.
 ```
 
-`java Statement st = con.createStatement(); `
+`java Statement st = con.createStatement();`
 
 ## 5. Execute SQL Queries
 
@@ -49,7 +49,7 @@ Used to execute SQL queries.
 Example:
 
 
- ```java String sql_query = "CREATE TABLE example_table (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), age INT)";
+ ``` java String sql_query = "CREATE TABLE example_table (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), age INT)";
 st.executeUpdate(sql_query);
 ````
 
