@@ -4,13 +4,17 @@ import java.util.Scanner;
 public class recWorker {
 
     public static void main(String[] args) {
-        // Define database connection details
-        String url = "jdbc:mysql://localhost:3306/exampledb"; // Replace 'exampledb' with your database name
-        String username = "root";
-        String password = ""; // Default password for XAMPP's MySQL root user is empty
+        String url = "jdbc:postgresql://localhost:5432/javaclass";
+    
+        String user = "postgres";  
+        String password = "2003";
+        // // Define database connection details
+        // String url = "jdbc:mysql://localhost:3306/exampledb"; // Replace 'exampledb' with your database name
+        // String username = "root";
+        // String password = ""; // Default password for XAMPP's MySQL root user is empty
 
         // SQL query to insert data
-        String insert_query = "INSERT INTO Employee (Name, Age) VALUES (?, ?)";
+        String insert_query = "INSERT INTO taxpayer (Name, Age) VALUES (?, ?)";
 
         // Set up Scanner for user input
         Scanner input = new Scanner(System.in);
@@ -20,7 +24,7 @@ public class recWorker {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish connection
-            Connection con = DriverManager.getConnection(url, username, password);
+            Connection con = DriverManager.getConnection(url, user, password);
 
             // Check connection status
             if (con != null) {

@@ -3,20 +3,24 @@ import java.sql.*;
 public class getWorkers {
 
     public static void main(String[] args) {
+        String url = "jdbc:postgresql://localhost:5432/javaclass";
+    
+        String user = "postgres";  
+        String password = "2003";
         // Define database connection details
-        String url = "jdbc:mysql://localhost:3306/exampledb"; // Replace 'exampledb' with your database name
-        String username = "root";
-        String password = ""; // Default password for XAMPP's MySQL root user is empty
+        // String url = "jdbc:mysql://localhost:3306/exampledb"; // Replace 'exampledb' with your database name
+        // String username = "root";
+        // String password = ""; // Default password for XAMPP's MySQL root user is empty
 
         // SQL query to fetch data
-        String select_query = "SELECT * FROM Employee";
+        String select_query = "SELECT * FROM taxpayer";
 
         try {
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish connection
-            Connection con = DriverManager.getConnection(url, username, password);
+            Connection con = DriverManager.getConnection(url, user, password);
 
             // Check connection status
             if (con != null) {
