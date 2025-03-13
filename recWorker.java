@@ -27,6 +27,8 @@ public class recWorker {
             Connection con = DriverManager.getConnection(url, user, password);
 
             // Check connection status
+            //hello worl
+            //
             if (con != null) {
                 System.out.println("Connection established successfully!");
             }
